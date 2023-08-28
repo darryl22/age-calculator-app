@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.outer-container{
+    background-color: hsl(0, 0%, 94%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container{
+    background-color: white;
+    width: 40%;
+    min-width: 290px;
+    border-radius: 20px;
+    border-bottom-right-radius: 200px;
+    padding: 3em;
+}
+
+.date-inputs{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.date-inputs div{
+    width: fit-content;
+}
+
+.inputs{
+    padding: 0.4em;
+    font-size: 1.6em;
+    width: 110px;
+    font-weight: 700;
+    border-radius: 5px;
+    /* border: 1px solid hsl(0, 0%, 86%); */
+}
+
+.inputs:focus{
+    outline: none;
+    border: 1px solid hsl(259, 100%, 65%);
+}
+
+.inputs:hover{
+    cursor: pointer;
+}
+
+.input-label{
+    color: hsl(0, 1%, 44%);
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.button-div{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+    padding: 1.4em;
+    border: none;
+}
+
+.button:hover{
+    background-color: hsl(259, 100%, 65%);
+    cursor: pointer;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: hsl(0, 0%, 86%);
+    position: absolute;
+}
+
+.input-text{
+    font-size: 4.5em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.input-result{
+    color: hsl(259, 100%, 65%);
+}
+
+@media screen and (max-width: 1250px) {
+    .main-container{
+        padding: 1em;
+        border-bottom-right-radius: 100px;
+    }
+
+    .button{
+        left: -50%;
+        transform: translateX(50%);
+    }
+
+    .button-div{
+        margin: 20px 0px;
+    }
+
+    .inputs{
+        width: 60px;
+    }
+
+    .input-text{
+        font-size: 3em;
+    }
+
+    .date-inputs{
+        margin-top: 20px;
+    }
 }
